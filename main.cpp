@@ -5,7 +5,11 @@
 int main(int argc, char *argv[])
 {
 	QApplication app(argc, argv);
-
+	
+	// add the thread
+        
+        adcreader = new ADCreader();
+        
 	// create the window
 	Window window;
 	window.showMaximized();
