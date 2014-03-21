@@ -1,7 +1,6 @@
 #include <window.h>
-#include <adcreader.h>
-#include <gz_clk.h>
-#include <gpio-sysfs.h>
+#include <adcreader.cpp>
+
 
 #include <QApplication>
 
