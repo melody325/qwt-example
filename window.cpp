@@ -1,5 +1,4 @@
 #include "window.h"
-#include <gz_clk.h>
 #include <gpio-sysfs.h>
 #include "adcreader.h"
 
