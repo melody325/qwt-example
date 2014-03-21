@@ -57,8 +57,8 @@ Window::Window() : gain(5), count(0)
 	// At the moment it doesn't do anything else than
 	// running in an endless loop and which prints out "tick"
 	// every second.
-//	adcreader = new ADCreader();
-//	adcreader->start();
+	adcreader = new ADCreader();
+	adcreader->start();
 }
 
 Window::~Window() {
@@ -70,8 +70,13 @@ Window::~Window() {
 }
 
 void Window::timerEvent( QTimerEvent * )
-{
-	double inVal = gain * sin( M_PI * count/50.0 );
+{	
+	adcreader = new ADCreader();
+	adcreader->start();
+	if (adcreader->hasSample())
+	    inVal = adcreader->getSample();
+	    
+	//double inVal = gain * sin( M_PI * count/50.0 );
 	++count;
 
 	// add the new input to the plot
