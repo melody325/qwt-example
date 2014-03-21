@@ -1,4 +1,5 @@
 #include <window.h>
+#include <adcreader.h>
 
 #include <QApplication>
 
@@ -7,8 +8,8 @@ int main(int argc, char *argv[])
 	QApplication app(argc, argv);
 	
 	// add the thread
-        
         adcreader = new ADCreader();
+        adcreader->start();
         
 	// create the window
 	Window window;
