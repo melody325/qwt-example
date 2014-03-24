@@ -1,6 +1,5 @@
 #include "window.h"
-#include <gpio-sysfs.h>
-#include "adcreader.cpp"
+#include "adcreader.h"
 
 #include <cmath>  // for sine stuff
 
