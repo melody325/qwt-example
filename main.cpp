@@ -1,6 +1,6 @@
 #include <window.h>
 #include <adcreader.cpp>
-#include <adcreader.h>
+#include <adcreader.cpp>
 
 
 #include <QApplication>
@@ -9,11 +9,11 @@ int main(int argc, char *argv[])
 {
 	QApplication app(argc, argv);
 	
-	// add the thread
-        //adcreader = new ADCreader();
-        //adcreader->start();
-        //if (adcreader->has Sample())
-            //inVal = adcreader->getSample();
+	//add the thread
+        adcreader = new ADCreader();
+        adcreader->start();
+        if (adcreader->has Sample())
+            inVal = adcreader->getSample();
             
 	// create the window
 	Window window;
