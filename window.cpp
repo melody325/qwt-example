@@ -49,14 +49,14 @@ Window::Window() : gain(5), count(0)
 	hLayout->addWidget(plot);
 
 	setLayout(hLayout);
-
+	
 	// This is a demo for a thread which can be
 	// used to read from the ADC asynchronously.
 	// At the moment it doesn't do anything else than
 	// running in an endless loop and which prints out "tick"
 	// every second.
-	//adcreader = new ADCreader();
-	//0adcreader->start();
+	adcreader = new ADCreader();
+	0adcreader->start();
 }
 
 Window::~Window() {
