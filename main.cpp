@@ -1,6 +1,6 @@
 #include <window.h>
-#include <adcreader.cpp>
-#include <adcreader.cpp>
+#include <adcreader.h>
+
 
 
 #include <QApplication>
