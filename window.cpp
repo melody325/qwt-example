@@ -72,19 +72,19 @@ void Window::timerEvent( QTimerEvent * )
 	//adcreader = new ADCreader();
 	//adcreader->start();
 	if (adcreader->hasSample())
-	    inVal = adcreader->getSample();
+	    value = adcreader->getSample();
 	    
-	//double inVal = gain * sin( M_PI * count/50.0 );
+	double value = gain * sin( M_PI * count/50.0 );
 	++count;
 
 	// add the new input to the plot
 	memmove( yData, yData+1, (plotDataSize-1) * sizeof(double) );
-	yData[plotDataSize-1] = inVal;
+	yData[plotDataSize-1] = value;
 	curve->setSamples(xData, yData, plotDataSize);
 	plot->replot();
 
 	// set the thermometer value
-	thermo->setValue( inVal + 10 );
+	thermo->setValue( value + 10 );
 }
 
 
