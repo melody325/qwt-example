@@ -1,5 +1,8 @@
 #include "adcreader.h"
 #include <QDebug>
+#include "gpio-sysfs.h"
+#include "gz_clk.h"
+
 
 void ADCreader::run()
 {
