@@ -56,7 +56,7 @@ Window::Window() : gain(5), count(0)
 	// running in an endless loop and which prints out "tick"
 	// every second.
 	adcreader = new ADCreader();
-	0adcreader->start();
+	adcreader->start();
 }
 
 Window::~Window() {
@@ -69,8 +69,8 @@ Window::~Window() {
 
 void Window::timerEvent( QTimerEvent * )
 {	
-	adcreader = new ADCreader();
-	adcreader->start();
+	//adcreader = new ADCreader();
+	//adcreader->start();
 	if (adcreader->hasSample())
 	    inVal = adcreader->getSample();
 	    
