@@ -6,7 +6,8 @@
 class ADCreader : public QThread
 {
 public:
-	ADCreader() {running = 0;};
+	ADCreader();
+	{running = 0;};
 	void quit();
 	void run();
 private:
