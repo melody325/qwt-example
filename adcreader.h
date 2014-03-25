@@ -13,7 +13,7 @@
 #include <linux/spi/spidev.h>
 // sets the clock for the AD converter
 #include "gz_clk.h"
-
+#include "gpio-sysfs.h""
 // This class reads continously from the AD7705
 // and stores the data in a ringbuffer
 // which can be read with getSample() and
