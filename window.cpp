@@ -74,10 +74,10 @@ void Window::timerEvent( QTimerEvent * )
 	if (adcreader->hasSample())
 	    {
 	    	value = adcreader->getSample();
-	    }
 	    
-	double value = gain * sin( M_PI * count/50.0 );
-	++count;
+	    
+	// value = gain * sin( M_PI * count/50.0 );
+	//++count;
 
 	// add the new input to the plot
 	memmove( yData, yData+1, (plotDataSize-1) * sizeof(double) );
@@ -87,7 +87,7 @@ void Window::timerEvent( QTimerEvent * )
 
 	// set the thermometer value
 	thermo->setValue( value + 10 );
-}
+}}
 
 
 // this function can be used to change the gain of the A/D internal amplifier
