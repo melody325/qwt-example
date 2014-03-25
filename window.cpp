@@ -61,9 +61,9 @@ Window::Window() : gain(5), count(0)
 
 Window::~Window() {
 	// tells the thread to no longer run its endless loop
-	adcreader->quit();
+//	adcreader->quit();
 	// wait until the run method has terminated
-	adcreader->wait();
+//	adcreader->wait();
 //	delete adcreader;
 }
 
@@ -72,7 +72,9 @@ void Window::timerEvent( QTimerEvent * )
 	//adcreader = new ADCreader();
 	//adcreader->start();
 	if (adcreader->hasSample())
-	    value = adcreader->getSample();
+	    {
+	    	value = adcreader->getSample();
+	    }
 	    
 	double value = gain * sin( M_PI * count/50.0 );
 	++count;
