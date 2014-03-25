@@ -11,11 +11,7 @@
 #include "adcreader.h"
 
 // class definition 'ADCreader'
-class ADCreader : public QThread
-{
-	public:
-	  ADCreader();
-}	  
+	  
 
 // class definition 'Window'
 class Window : public QWidget
