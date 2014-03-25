@@ -11,6 +11,8 @@
 #include "adcreader.h"
 
 // class definition 'ADCreader'
+class ADCreader ;
+
 	  
 
 // class definition 'Window'
@@ -20,6 +22,8 @@ class Window : public QWidget
 	Q_OBJECT
 
 public:
+        ADCreader *adcreader;
+        adcreader = new ADCreader();
 	Window(); // default constructor - called when a Window is declared without arguments
 
 	~Window();
@@ -49,7 +53,7 @@ private:
 	double gain;
 	int count;
 
-	ADCreader *adcreader;
+	//ADCreader *adcreader;
 };
 
 #endif // WINDOW_H
