@@ -7,10 +7,10 @@ int main(int argc, char *argv[])
 	QApplication app(argc, argv);
 	
 	//add the thread
-        adcreader = new ADCreader();
-        adcreader->start();
-        if (adcreader->hasSample())
-            inVal = adcreader->getSample();
+        //adcreader = new ADCreader();
+        //adcreader->start();
+        //if (adcreader->hasSample())
+        //    inVal = adcreader->getSample();
 
 	// create the window
 	Window window;
