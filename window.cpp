@@ -74,7 +74,8 @@ void Window::timerEvent( QTimerEvent * )
 	if (adcreader->hasSample())
 	    
 	    	inVal = adcreader->getSample();
-	    
+	else 
+		inVal = gain;
 	    
 	// value = gain * sin( M_PI * count/50.0 );
 	//++count;
