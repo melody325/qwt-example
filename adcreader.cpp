@@ -1,7 +1,7 @@
 #include "adcreader.h"
 #include <QDebug>
 
-#include "gpio-sysfs.h"
+
 #include <fcntl.h>
 #include <sys/ioctl.h>
 #include <linux/types.h>
