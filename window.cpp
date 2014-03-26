@@ -82,7 +82,7 @@ void Window::timerEvent( QTimerEvent * )
 
 	// add the new input to the plot
 	memmove( yData, yData+1, (plotDataSize-1) * sizeof(double) );
-	yData[plotDataSize-1] = 1000*(inVal-2.5);
+	yData[plotDataSize-1] = 1000*(2.5-inVal);
 	curve->setSamples(xData, yData, plotDataSize);
 	plot->replot();
 
