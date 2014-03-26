@@ -34,7 +34,7 @@ class ADCreader : public QThread
   ADCreader();
   
   // declare variable value
-  double value;
+  //double value;
   
   // ring buffer functions
   int hasSample();
