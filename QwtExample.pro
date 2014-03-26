@@ -10,6 +10,6 @@ TARGET = QwtExample
 
 LIBS += -lqwt -lm -lbcm2835 -lrt
 
-HEADERS += window.h adcreader.h
+HEADERS += window.h adcreader.h gpio-sysfs.h gz_clk.h
 
-SOURCES += main.cpp window.cpp adcreader.cpp
+SOURCES += main.cpp window.cpp adcreader.cpp gpio-sysfs.cpp gz_clk.cpp
