@@ -72,7 +72,7 @@ void Window::timerEvent( QTimerEvent * )
 	//adcreader = new ADCreader();
 	//adcreader->start();
 	if (adcreader->hasSample())
-	    {
+	    
 	    	inVal = adcreader->getSample();
 	    
 	    
@@ -87,7 +87,7 @@ void Window::timerEvent( QTimerEvent * )
 
 	// set the thermometer value
 	thermo->setValue( inVal + 10 );
-}}
+}
 
 
 // this function can be used to change the gain of the A/D internal amplifier
