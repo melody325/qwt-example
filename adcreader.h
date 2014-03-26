@@ -11,9 +11,10 @@
 #include <sys/ioctl.h>
 #include <linux/types.h>
 #include <linux/spi/spidev.h>
-// sets the clock for the AD converter
-#include <gz_clk.h>
 #include <gpio-sysfs.h>
+// sets the clock for the AD converter
+#include "gz_clk.h"
+
 // This class reads continously from the AD7705
 // and stores the data in a ringbuffer
 // which can be read with getSample() and
@@ -32,9 +33,6 @@ class ADCreader : public QThread
 {
  public:
   ADCreader();
-  
-  // declare variable value
-  //double value;
   
   // ring buffer functions
   int hasSample();
