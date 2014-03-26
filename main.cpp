@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 	//add the thread
         adcreader = new ADCreader();
         adcreader->start();
-        if (adcreader->has Sample())
+        if (adcreader->hasSample())
             inVal = adcreader->getSample();
 
 	// create the window
