@@ -86,7 +86,7 @@ void Window::timerEvent( QTimerEvent * )
 	plot->replot();
 
 	// set the thermometer value
-	thermo->setValue( value + 10 );
+	thermo->setValue( inVal + 10 );
 }}
 
 
