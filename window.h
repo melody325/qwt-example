@@ -11,7 +11,7 @@
 #include "adcreader.h"
 
 // class definition 'ADCreader'
-//class ADCreader ;
+// class ADCreader ;
 
 	  
 
