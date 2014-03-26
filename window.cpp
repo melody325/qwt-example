@@ -73,7 +73,7 @@ void Window::timerEvent( QTimerEvent * )
 	//adcreader->start();
 	if (adcreader->hasSample())
 	    {
-	    	value = adcreader->getSample();
+	    	inVal = adcreader->getSample();
 	    
 	    
 	// value = gain * sin( M_PI * count/50.0 );
@@ -81,7 +81,7 @@ void Window::timerEvent( QTimerEvent * )
 
 	// add the new input to the plot
 	memmove( yData, yData+1, (plotDataSize-1) * sizeof(double) );
-	yData[plotDataSize-1] = value;
+	yData[plotDataSize-1] = inVal;
 	curve->setSamples(xData, yData, plotDataSize);
 	plot->replot();
 
