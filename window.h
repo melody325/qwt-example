@@ -51,6 +51,7 @@ private:
 
 	double gain;
 	int count;
+	double inVal;
 
 	ADCreader *adcreader;
 };
