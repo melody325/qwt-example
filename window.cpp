@@ -71,12 +71,12 @@ void Window::timerEvent( QTimerEvent * )
 {	
 	//adcreader = new ADCreader();
 	//adcreader->start();
-	if (adcreader->hasSample())
+	while (adcreader->hasSample())
 	    
-	    	inVal = adcreader->getSample();
-	else 
-		inVal = gain;
-	    
+	    {
+	    	inVal = (adcreader->getSample());
+
+	        //inVal = equation;
 	// value = gain * sin( M_PI * count/50.0 );
 	//++count;
 
@@ -88,6 +88,7 @@ void Window::timerEvent( QTimerEvent * )
 
 	// set the thermometer value
 	thermo->setValue( inVal + 10 );
+	    }
 }
 
 
